@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel administrativo · Barros Barreto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+<!-- Tela de login -->
+<div class="login" id="login">
+  <div class="login-art" aria-hidden="true"><div class="fita f1"></div><div class="fita f2"></div><div class="fita f3"></div><div class="fita f4"></div><div class="fita f5"></div></div>
+  <form class="login-box" id="f-login" autocomplete="on">
+    <div class="logo">BB</div>
+    <h1>Painel administrativo</h1>
+    <p class="muted">Colégio Estadual Barros Barreto</p>
+    <label for="l-user">Usuário</label>
+    <input id="l-user" class="in" autocomplete="username" required autofocus>
+    <label for="l-pass">Senha</label>
+    <input id="l-pass" type="password" class="in" autocomplete="current-password" required>
+    <div class="erro" id="l-erro" role="alert"></div>
+    <button class="bt bt-primario" style="width:100%">Entrar</button>
+    <p class="muted dica" id="l-dica">Primeiro acesso: usuário <b>admin</b> e senha <b>admin123</b>. Troque a senha em <i>Usuários</i> logo após entrar.</p>
+    <a href="../index.html" class="link">← Voltar ao site</a>
+  </form>
+</div>
+
+<!-- Aplicação -->
+<div class="app" id="app" hidden>
+  <aside class="side" id="side">
+    <div class="side-topo"><div class="logo sm">BB</div><div><strong>Barros Barreto</strong><small>Painel administrativo</small></div></div>
+    <nav id="menu" aria-label="Menu do painel"></nav>
+    <div class="side-fim"><a class="bt bt-ghost bt-sm" href="../index.html" target="_blank" rel="noopener">Ver site ↗</a><button class="bt bt-ghost bt-sm" id="sair">Sair</button></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <div class="main">
+    <header class="top">
+      <button class="hamb" id="hamb" aria-label="Abrir menu">☰</button>
+      <h1 id="titulo-pg">Painel</h1>
+      <div class="top-dir"><span class="user" id="user-lbl"></span></div>
+    </header>
+    <div class="conteudo" id="conteudo" tabindex="-1"></div>
+  </div>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal-box" id="modal-box"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="../assets/js/store.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
